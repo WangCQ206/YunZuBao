@@ -1,0 +1,34 @@
+<!-- 标题 -->
+<!-- <view>
+  <view class='title'>
+    {{message.title}}
+  </view> -->
+  <!-- 作者和时间 -->
+  <!-- <view class='detail'>
+    <text style='widthFix'>{{message.authors}}</text>
+    <view class='space' />
+      <text >2018.3.18</text>
+    </view>
+  </view> -->
+<!-- 正文 -->
+<!-- <view class='content'>
+  {{message.content}}
+</view> -->
+
+
+<!-- 标题 -->
+<view>
+  <view class='title'>
+    中模国际
+  </view>
+    <!-- 作者和时间 -->
+<view class='detail'>
+    <text style='widthFix'>作者</text>
+    <view class='space' />
+      <text >2020.4.12</text>
+    </view>
+  </view>
+<!-- 正文 -->
+<view class='content'>
+  这是一个demo界面
+</view>

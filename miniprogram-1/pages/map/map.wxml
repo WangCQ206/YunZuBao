@@ -1,0 +1,53 @@
+<view class='list-msg'>
+  <!--下拉框  -->
+      <view class='list-msg2' bindtap='bindShowMsg'>
+          <text>{{province}}</text>
+          <image style='height:20rpx;width:20rpx;'></image>
+      </view>
+  <!-- 下拉需要显示的列表 -->
+      <view class="select_box" 
+      wx:if="{{select}}">
+          <view class="select_one" 
+           bindtap="mySelect"
+           data-name="{{item.name}}" 
+           id="{{item.id}}" 
+           wx:for="{{provinces}}" 
+           wx:key="index">
+           {{item.name}}
+           </view>
+      </view>
+  </view>
+<map 
+id="map" 
+longitude="{{longitude}}" 
+latitude="{{latitude}}" 
+scale="{{scale}}"  
+markers="{{markers}}" 
+polyline="{{polyline}}"
+controls="{{controls}}" 
+bindmarkertap="showModal"
+ data-id="{{markers}}"
+show-location>
+
+<!--屏幕背景变暗的背景  -->
+    <cover-view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></cover-view>
+    <!--弹出框  -->
+    <cover-view animation="{{animationData}}" class="commodity_attr_box" wx:if="{{showModalStatus}}" >
+ 
+      <cover-view class='placeBox'>
+ 
+        <cover-view class='placeViewLt'>
+          <cover-view class='viewTitle'>位置：{{locationInfo[index]}}</cover-view>
+          <!-- <cover-view class='viewDis'>开关状态</cover-view> -->
+          <button class="detail-btn" bindtap="toDetail">查看该机器的详情</button>
+          <!-- <cover-view class='viewAddr'></cover-view>  -->
+        </cover-view>
+        <!-- <cover-view class='placeViewRt'>
+          <cover-image data-id="{{myall.id}}" bindtap="opendetail" src='/images/mk.png'></cover-image>
+        </cover-view> -->
+ 
+      </cover-view>
+  </cover-view>
+</map>
+
+

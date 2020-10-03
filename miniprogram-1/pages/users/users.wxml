@@ -1,0 +1,40 @@
+<view class="mine-wrapper">
+  <view class="avatar-wrapper">
+    <view>
+      <view class="avatar">
+        <image style="border-radius:50%;" src="{{userinfo.avatarUrl ? userinfo.avatarUrl:'/images/user/user5.png'}}"></image>
+      </view>
+      <!-- 登录成功 -->
+      <view class="text" wx:if="{{np==false}}">
+        <text wx:if="{{per}}">超级用户</text>
+        <text wx:else>普通用户</text>
+        <!-- <text wx:else bindtap="toLogin">注册 / 登录</text> -->
+      </view>
+      <view class="text" wx:else>
+        <text bindtap="toLogin">注册 / 登录</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="list-wrapper">
+    <view class="alllists">
+      <block wx:for="{{menuitems}}" wx:key="menu_for">
+        <navigator url="{{item.url}}" class="lists">
+        <view class='content'>
+          <view class="listimg">
+            <image src="{{item.icon}}"></image>
+          </view>
+          <view class="listtext">{{item.text}}</view>
+          <view class="listicon">{{item.tips}}</view>
+          <view class="arrows">
+            <image src="{{item.arrows}}"></image>
+          </view>
+        </view>
+        </navigator>
+        <!-- 分割线 -->
+        <view class="divLine"></view>
+      </block>
+    </view>
+  </view>
+  <button bindtap="backlogin" wx:if="{{np==false}}">退出登录</button>
+</view>

@@ -1,0 +1,27 @@
+<view class="table">
+  <view class="tr bg-w">
+  <view class="th">当前位置</view>
+  <view class="th">设备名称</view>
+  <view class="th">状态</view>
+  <view class="th">详情</view>
+  <view class="th " wx:if="{{per}}">控制开关</view>
+ </view>
+
+ <block wx:for="{{eqpList}}" wx:key="index">
+  <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+    <view class="td">{{item.latitude}},{{item.longitude}}</view>
+    <view class="td">{{item.masterId}}</view>
+    <view class="td">{{item.status}}</view>
+    <switch catchtap="controlonoff" class="td" id="{{item.masterId}}" checked="{{item.status}}" ></switch>
+    <button class="show-btn" bindtap="toDetail" data-index="{{index}}">进入</button>
+  </view>
+  <view class="tr" wx:else>
+    <view class="td">{{item.latitude}},{{item.longitude}}</view>
+    <view class="td">{{item.masterId}}</view>
+    <view class="td">{{item.status}}</view>
+    <switch catchtap="controlonoff" class="td" id="{{item.masterId}}" checked="{{item.status}}"></switch>
+    <button class="show-btn" bindtap="toDetail" data-index="{{index}}">进入</button>
+  </view>
+ </block>
+ <view>点击可进入详细页面</view>
+</view>

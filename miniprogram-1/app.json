@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/statistic/statistic",
+    "pages/map/map",
+    "pages/chart/chart",
+    "pages/users/users",
+    "pages/table/table",
+    "pages/detailchart/detailchart",
+    "pages/detail/detail",
+    "pages/depage/depage",
+    "pages/openTime/openTime",
+    "pages/count/count"
+  ],
+  
+  "permission": {
+    "scope.userLocation": {
+      "desc": "您的位置信息将用于寻找附近的检测点"
+    }
+  },
+
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "中模国际爬架智能控制系统",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath":"images/user/home.png",
+        "selectedIconPath":"images/user/home1.png"
+        
+      },
+      {
+        "pagePath": "pages/statistic/statistic",
+        "text": "项目",
+        "iconPath":"images/user/work.png",
+        "selectedIconPath":"images/user/work1.png"
+      },
+        
+      {
+        "pagePath": "pages/users/users",
+        "text": "用户",
+        "iconPath":"images/user/user4.png",
+        "selectedIconPath":"images/user/user4_1.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

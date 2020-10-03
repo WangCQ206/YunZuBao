@@ -1,0 +1,19 @@
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">开机时间</view>
+    <view class="th">关机时间</view>
+    <view class="th">开机时长</view>
+ </view>
+  <view wx:for="{{logs}}" wx:key="index">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.loadOnTime}}</view>
+      <view class="td">{{item.loadOffTime}}</view>
+      <view class="td" style="text-align:center">{{item.loadLength}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td">{{item.loadOnTime}}</view>
+      <view class="td">{{item.loadOffTime}}</view>
+      <view class="td" style="text-align:center">{{item.loadLength}}</view>
+    </view>
+  </view>
+</view>

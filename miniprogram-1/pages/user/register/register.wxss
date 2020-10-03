@@ -1,0 +1,72 @@
+page{
+  
+}
+.login-box{
+    justify-content:center;
+}
+.username{
+  display: flex;
+  flex-direction: row;
+  font-size: 35rpx;
+  color: white;
+  flex-wrap: nowrap;
+}
+.password{
+  display: flex;
+  flex-direction: row;
+  font-size: 35rpx;
+  color: white;
+  padding-top: 20rpx;
+}
+.passwordconfirm{
+  display: flex;
+  flex-direction: row;
+  font-size: 35rpx;
+  color: white;
+  padding-top: 20rpx;
+}
+.password-box{
+  border: 1rpx solid gray;
+  border-width:thin;
+  margin-left: 67rpx;
+  width: 380rpx;
+}
+.passwordconfirm-box{
+  border: 1rpx solid gray;
+  border-width:thin;
+  margin-left: 0rpx;
+  width: 380rpx;
+}
+.username-box{
+  border: 1rpx solid gray;
+  border-width:thin;
+  margin-left: 33rpx;
+  width: 380rpx;
+}
+.registerBtn { 
+  width: 100%; 
+  margin-top: 5px; 
+ }
+ .container { 
+  height: 100%; 
+  display: flex; 
+  flex-direction: column; 
+  padding: 0; 
+  box-sizing: border-box; 
+  background-color: #f2f2f2
+ } 
+   
+ /*登录图片*/
+ .login-icon{ 
+  flex: none; 
+ } 
+ .login-img{ 
+  width: 750rpx; 
+ } 
+   
+ /*表单内容*/
+ .login-from { 
+  margin-top: 20px; 
+  flex: auto; 
+  height:100%; 
+ } 

@@ -1,0 +1,28 @@
+<!-- <view>当前机器的启动时间为：{{eqpList.masterId}}</view>
+<view>当前机器的地理位置为：{{eqpList.latitude}},{{eqpList.longitude}}</view>
+<view>当前机器的状态为：{{eqpList.status}}</view> -->
+<button bindtap="OffOn">开关机时间</button>
+<view class="table">
+  <view class="tr bg-w">
+    <view class="th">操作时间</view>
+    <view class="th">操作</view>
+    <!-- <view class="th">锁机时间</view> -->
+    <!-- <view class="th">长度</view> -->
+ </view>
+  <view wx:for="{{logs}}" wx:key="index">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <!-- <view class="td">{{item.loadOnTime}}</view> -->
+      <!-- <view class="td">{{item.loadOffTime}}</view> -->
+      <!-- <view class="td" style="text-align:center">{{item.loadLength}}</view> -->
+      <view class="td">{{item.datetime}}</view>
+      <view class="td">{{item.msg}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <!-- <view class="td">{{item.loadOnTime}}</view> -->
+      <!-- <view class="td">{{item.loadOffTime}}</view> -->
+      <!-- <view class="td" >{{item.loadLength}}</view> -->
+      <view class="td">{{item.datetime}}</view>
+      <view class="td">{{item.msg}}</view>
+    </view>
+  </view>
+</view>

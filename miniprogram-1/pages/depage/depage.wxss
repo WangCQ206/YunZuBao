@@ -1,0 +1,26 @@
+.title{
+  border: 0rpx solid red;
+  font-size: 60rpx;
+  margin-top:50rpx;
+  margin-left: 50rpx;
+}
+.detail{
+  margin: 35rpx;
+  border: 0rpx solid blue;
+  height: 50rpx;
+  display: flex;
+  flex-direction: row;
+  font-size: 20rpx;
+  color: gray;
+  align-items: center;
+  padding-left: 15rpx;
+}
+.space{
+   height: 50rpx;
+   width: 20rpx;
+}
+.content{
+  font-size: 35rpx;
+  border: 0rpx solid black;
+  margin: 40rpx 50rpx;
+}

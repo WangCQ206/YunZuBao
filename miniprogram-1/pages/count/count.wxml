@@ -1,0 +1,54 @@
+<button bindtap="showResult">工程量统计</button>
+
+<view>输入楼层高度</view>
+<input class="inputText" placeholder="一般楼层高度为4-4.5m" type="text" bindinput="heightinput" /> 
+
+<view class="select-speed">设置速度</view>
+<view class='list-msg'>
+  <!-- 下拉框  -->
+      <view class='list-msg2' bindtap='bindShowMsg'>
+          <text>{{pleaseSelect}}</text>
+          <image style='height:20rpx;width:20rpx;'></image>
+      </view>
+  <!-- 下拉需要显示的列表 -->
+      <view class="select_box" 
+      wx:if="{{select}}">
+          <view class="select_one" 
+           bindtap="mySelect"
+           data-name="{{item.name}}" 
+           id="{{item.id}}" 
+           wx:for="{{speeds}}" 
+           wx:key="index">
+           {{item.name}}
+           </view>
+      </view>
+  </view>
+
+ 
+<!-- <view class="tui-picker-content">
+ <view class="tui-picker-name">工程量统计</view> -->
+ <!-- <picker mode="date" value="{{date}}" start="2017-10-01" end="2017-10-08" bindchange="changeDate">
+ <view class="tui-picker-detail">
+ 请选择时间
+ </view>
+ </picker> -->
+ <view>请选择开始的日期</view>
+<picker mode="date" value="{{startDate}}" start="2020-01-01" end="2020-12-31" bindchange="listenerDatePickerSelectedStart">
+    <text>{{startDate}}</text>
+</picker>
+<view>请选择结束的日期</view>
+<picker mode="date" value="{{endDate}}" start="2020-01-01" end="2020-12-31" bindchange="listenerDatePickerSelectedEnd">
+    <text>{{endDate}}</text>
+</picker>
+<view>请选择开始时间</view>
+<picker mode="time" value="{{startTime}}" start="00:00" end="24:00" bindchange="listenerTimePickerSelectedStart">
+    <text>{{startTime}}</text>
+</picker>
+
+<view>请选择结束时间</view>
+<picker mode="time" value="{{endTime}}" start="00:00" end="24:00" bindchange="listenerTimePickerSelectedEnd">
+    <text>{{endTime}}</text>
+</picker>
+
+<text>工程量为{{result}}层</text>
+<!-- </view> -->

@@ -1,0 +1,74 @@
+<view class="content">
+  <!-- <view> -->
+    <ec-canvas id="mychart1" canvas-id="mychart-line" ec="{{ ec1 }}"></ec-canvas>
+  <!-- </view> -->
+  <!-- <view> -->
+    <ec-canvas id="mychart2" canvas-id="mychart-bar" ec="{{ ec2 }}"></ec-canvas>
+  <!-- </view> -->
+  <!-- <view class="location">{{eqpStatus[_index].latitude}},{{eqpStatus[_index].longitude}}</view> -->
+  <view class="location">{{locationInfo[_index]}}</view>
+  <view class="buttons">
+    <!-- <button class="everbutton" bindtap="power">电源</button> -->
+    <button class="everbutton" bindtap="up">上升</button>
+    <button class="everbutton" bindtap="down">下降</button>
+    <!-- <button class="everbutton" bindtap="over">过载</button> -->
+    <!-- <button class="everbutton" bindtap="loss">失载</button> -->
+  </view>
+
+  <view class="tabbar">
+    <view class="tabbar-item1">
+      <view class="boxleft">
+        <view class='arrow-left' bindtap="lastpage"></view>
+      </view>
+      <view class="info">
+        <view style="font-size:40rpx;color:red">{{eqpStatus[_index].masterId}}组机位</view>
+        <view>工程量:</view>
+        <view>现在暂时没有数据</view>
+        <button class="show-btn" bindtap="toDetail">查看详情</button>
+        <!-- <view>slaves:{{eqpStatus[_index].slaves}}</view> -->
+      </view>
+    </view>
+
+     <view class="tabbar-item2" wx:if="{{per}}">
+      <view class="roundgreen" bindtap="controlonoff" id="{{_index}}" wx:if="{{eqpStatus[_index].status}}">
+      开机
+      </view>
+      <view class="roundred" bindtap="controlonoff" id="{{_index}}" wx:else>
+      锁机
+      </view>
+    </view>
+
+    <view class="tabbar-item2" wx:else>
+      <view class="roundgreen" bindtap="showper" id="{{_index}}" wx:if="{{eqpStatus[_index].status}}">
+      开机
+      </view>
+      <view class="roundred" bindtap="showper" id="{{_index}}" wx:else>
+      锁机
+      </view>
+    </view>
+
+    <view class="tabbar-item3">
+      <view class="rightbutton">
+        <view class='arrow-right' bindtap="nextpage"></view>
+      </view>
+      <view class="btn-text">
+        <text>超载或失载时可点击按钮查看数据</text>
+        <view class="warnbutton" wx:if='{{eqpStatus[_index].maxLoad>=6}}' id="{{_index}}">
+          <button style="background:red" bindtap="warnover" id="{{_index}}">
+            超载
+          </button>
+        </view>
+        <view class="warnbutton" wx:elif='{{eqpStatus[_index].minLoad<=1}}' id="{{_index}}">
+          <button style="background:red" bindtap="warnloss" id="{{_index}}">
+            失载
+          </button>
+        </view>
+        <view class="normalbutton" wx:else id="{{_index}}">
+          <view style="background:red" id="{{_index}}">
+            正常
+          </view> 
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

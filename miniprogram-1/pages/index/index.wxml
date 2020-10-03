@@ -1,0 +1,21 @@
+<image src="../../images/user/logo.png" class="logo" ></image>
+<!-- 滑动图片 -->
+<swiper autoplay indicator-dots circular interval='3000' class='upper'>
+  <block wx:for="{{imgsUrls}}" wx:key="index">
+    <swiper-item>
+     <image src="{{item}}" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- 间隔 -->
+<view class='Space' />
+
+<!-- 首页新闻 -->
+  <view class='everyNews' bindtap='OpenPage'wx:for="{{News}}" wx:key="index" data-id="{{index}}">
+    <view class='title'>
+      <text class='titleName'>{{item.title}}</text>
+      <text class='time'>{{item.time}}</text>
+    </view>
+      <image class='img'  src='{{item.img}}'></image>
+  </view>

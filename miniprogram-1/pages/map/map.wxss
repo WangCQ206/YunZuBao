@@ -1,0 +1,109 @@
+.list-msg {
+    padding: 0 20rpx;
+    background-color: #fff;
+    position: relative;
+}
+ 
+.list-msg1 {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+.list-msg .list-msg2 {
+    height: 60rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #ccc;
+    padding: 0 10rpx;
+}
+ 
+.select_box {
+    background-color: #eee;
+    overflow:scroll;
+    padding: 0 10rpx;
+    width: 93%;
+    height: 400rpx;
+    position: absolute;
+    z-index: 1;
+    
+}
+ 
+@keyframes myfirst {
+    from {
+        height: 0rpx;
+    }
+ 
+    to {
+        height: 210rpx;
+    }
+}
+ 
+.select_one {
+    height: 60rpx;
+    line-height: 60rpx;
+    border-bottom: 1px solid #ccc;
+}
+map{
+    width: 100%;
+    height:100vh
+}
+
+.commodity_screen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.2;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+.commodity_attr_box {
+  height: 280rpx;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background: #fff;
+  padding-top: 0rpx;
+}
+.placeBox{
+  width: 100%;
+  height: 150rpx;
+}
+ 
+.placeViewLt{
+  display: inline-block;
+  width: auto;
+ 
+ 
+  vertical-align: middle;
+}
+.viewTitle{
+  display: block;
+  font-size: 38rpx;
+  color: #3F51B5;
+  margin-left: 20rpx;
+  padding-top: 34rpx;
+}
+ 
+.viewDis{
+  display: inline-block;
+  font-size: 26rpx;
+  color: gray;
+  margin-left: 20rpx;
+}
+
+.detail-btn{
+  color: green;
+  width: 400rpx;
+  height: 300rpx;
+  justify-content: center;
+}
